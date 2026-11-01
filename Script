@@ -1,0 +1,183 @@
+-- =====================================================================
+-- ⚡ SATAYA_ZLO | ULTIMATE PROTECTED SCRIPT & KEY SYSTEM (FULL UI) ⚡
+-- =====================================================================
+
+local CoreGui = game:GetService("CoreGui")
+local Players = game:GetService("Players")
+local player = Players.LocalPlayer
+
+-- قائمة جميع الأكواد الـ 100 المقسمة والمعتمدة
+local VALID_KEYS = {
+    -- 1. قسم مفاتيح اليوم الواحد (33 كود)
+    "SATAYA-1D-A1B2-C3D4", "SATAYA-1D-E5F6-G7H8", "SATAYA-1D-J9K0-L1M2", "SATAYA-1D-N3P4-Q5R6", 
+    "SATAYA-1D-S7T8-U9V0", "SATAYA-1D-W1X2-Y3Z4", "SATAYA-1D-B5C6-D7E8", "SATAYA-1D-F9G0-H1J2", 
+    "SATAYA-1D-K3L4-M5N6", "SATAYA-1D-P7Q8-R9S0", "SATAYA-1D-T1U2-V3W4", "SATAYA-1D-X5Y6-Z7A8", 
+    "SATAYA-1D-B9C0-D1E2", "SATAYA-1D-F3G4-H5J6", "SATAYA-1D-K7L8-M9N0", "SATAYA-1D-P1Q2-R3S4", 
+    "SATAYA-1D-T5U6-V7W8", "SATAYA-1D-X9Y0-Z1A2", "SATAYA-1D-B3C4-D5E6", "SATAYA-1D-F7G8-H9J0", 
+    "SATAYA-1D-K1L2-M3N4", "SATAYA-1D-P5Q6-R7S8", "SATAYA-1D-T9U0-V1W2", "SATAYA-1D-X3Y4-Z5A6", 
+    "SATAYA-1D-B7C8-D9E0", "SATAYA-1D-F1G2-H3J4", "SATAYA-1D-K5L6-M7N8", "SATAYA-1D-P9Q0-R1S2", 
+    "SATAYA-1D-T3U4-V5W6", "SATAYA-1D-X7Y8-Z9A0", "SATAYA-1D-C1D2-E3F4", "SATAYA-1D-G5H6-J7K8", 
+    "SATAYA-1D-L9M0-N1P2",
+
+    -- 2. قسم مفاتيح الثلاث أيام (33 كود)
+    "SATAYA-3D-M3N4-P5Q6", "SATAYA-3D-R7S8-T9U0", "SATAYA-3D-V1W2-X3Y4", "SATAYA-3D-Z5A6-B7C8", 
+    "SATAYA-3D-D9E0-F1G2", "SATAYA-3D-H3J4-K5L6", "SATAYA-3D-M7N8-P9Q0", "SATAYA-3D-T1U2-V3W4", 
+    "SATAYA-3D-X5Y6-Z7A8", "SATAYA-3D-B9C0-D1E2", "SATAYA-3D-F3G4-H5J6", "SATAYA-3D-K7L8-M9N0", 
+    "SATAYA-3D-P1Q2-R3S4", "SATAYA-3D-T5U6-V7W8", "SATAYA-3D-X9Y0-Z1A2", "SATAYA-3D-B3C4-D5E6", 
+    "SATAYA-3D-F7G8-H9J0", "SATAYA-3D-K1L2-M3N4", "SATAYA-3D-P5Q6-R7S8", "SATAYA-3D-T9U0-V1W2", 
+    "SATAYA-3D-X3Y4-Z5A6", "SATAYA-3D-B7C8-D9E0", "SATAYA-3D-F1G2-H3J4", "SATAYA-3D-K5L6-M7N8", 
+    "SATAYA-3D-P9Q0-R1S2", "SATAYA-3D-T3U4-V5W6", "SATAYA-3D-X7Y8-Z9A0", "SATAYA-3D-A1B2-C3D4", 
+    "SATAYA-3D-E5F6-G7H8", "SATAYA-3D-J9K0-L1M2", "SATAYA-3D-N3P4-Q5R6", "SATAYA-3D-S7T8-U9V0", 
+    "SATAYA-3D-W1X2-Y3Z4",
+
+    -- 3. القسم الدائم - VIP (34 كود)
+    "SATAYA-VIP-Z9Y8-X7W6", "SATAYA-VIP-V5U4-T3S2", "SATAYA-VIP-R1Q0-P9N8", "SATAYA-VIP-M7L6-K5J4", 
+    "SATAYA-VIP-H3G2-F1E0", "SATAYA-VIP-D9C8-B7A6", "SATAYA-VIP-Z5Y4-X3W2", "SATAYA-VIP-V1U0-S9R8", 
+    "SATAYA-VIP-Q7P6-N5M4", "SATAYA-VIP-L3K2-J1H0", "SATAYA-VIP-G9F8-E7D6", "SATAYA-VIP-C5B4-A3Z2", 
+    "SATAYA-VIP-Y1X0-W9V8", "SATAYA-VIP-U7T6-S5R4", "SATAYA-VIP-Q3P2-N1M0", "SATAYA-VIP-L9K8-J7H6", 
+    "SATAYA-VIP-G5F4-E3D2", "SATAYA-VIP-C1B0-A9Z8", "SATAYA-VIP-Y7X6-W5V4", "SATAYA-VIP-U3T2-S1R0", 
+    "SATAYA-VIP-Q9P8-N7M6", "SATAYA-VIP-M5L4-K3J2", "SATAYA-VIP-H1G0-F9E8", "SATAYA-VIP-D7C6-B5A4", 
+    "SATAYA-VIP-Z3Y2-X1W0", "SATAYA-VIP-V9U8-T7S6", "SATAYA-VIP-R5Q4-P3N2", "SATAYA-VIP-M1L0-K9J8", 
+    "SATAYA-VIP-H7G6-F5E4", "SATAYA-VIP-D3C2-B1A0", "SATAYA-VIP-A1B2-C3D4", "SATAYA-VIP-E5F6-G7H8", 
+    "SATAYA-VIP-J9K0-L1M2", "SATAYA-VIP-N3P4-Q5R6"
+}
+
+-- إزالة أي واجهة سابقة لمنع التكرار
+if CoreGui:FindFirstChild("SatayaUltimateUI") then
+    CoreGui.SatayaUltimateUI:Destroy()
+end
+
+local ScreenGui = Instance.new("ScreenGui")
+ScreenGui.Name = "SatayaUltimateUI"
+ScreenGui.Parent = CoreGui
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+-- الإطار الرئيسي للواجهة (البانل)
+local MainFrame = Instance.new("Frame")
+MainFrame.Size = UDim2.new(0, 440, 0, 280)
+MainFrame.Position = UDim2.new(0.5, -220, 0.5, -140)
+MainFrame.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+MainFrame.BorderSizePixel = 0
+MainFrame.Active = true
+MainFrame.Draggable = true
+MainFrame.Parent = ScreenGui
+
+local UICorner = Instance.new("UICorner")
+UICorner.CornerRadius = UDim.new(0, 14)
+UICorner.Parent = MainFrame
+
+-- خلفية الصورة الفخمة
+local BGImage = Instance.new("ImageLabel")
+BGImage.Size = UDim2.new(1, 0, 1, 0)
+BGImage.BackgroundTransparency = 1
+BGImage.Image = "rbxassetid://0" -- استبدلها بـ Asset ID الخاص بالصورة إن وجد
+BGImage.ImageTransparency = 0.85
+BGImage.Parent = MainFrame
+
+-- العنوان الاحترافي للبانل
+local Title = Instance.new("TextLabel")
+Title.Size = UDim2.new(1, 0, 0, 50)
+Title.BackgroundTransparency = 1
+Title.Text = "⚡ SATAYA_ZLO | SECURE SYSTEM ⚡"
+Title.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title.TextSize = 18
+Title.Font = Enum.Font.GothamBold
+Title.Parent = MainFrame
+
+-- زر الإغلاق (X Button) في أعلى البانل
+local CloseBtn = Instance.new("TextButton")
+CloseBtn.Size = UDim2.new(0, 32, 0, 32)
+CloseBtn.Position = UDim2.new(1, -40, 0, 10)
+CloseBtn.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+CloseBtn.Text = "X"
+CloseBtn.TextColor3 = Color3.fromRGB(255, 80, 80)
+CloseBtn.TextSize = 16
+CloseBtn.Font = Enum.Font.GothamBold
+CloseBtn.Parent = MainFrame
+
+local CloseCorner = Instance.new("UICorner")
+CloseCorner.CornerRadius = UDim.new(0, 8)
+CloseCorner.Parent = CloseBtn
+
+CloseBtn.MouseButton1Click:Connect(function()
+    ScreenGui:Destroy()
+end)
+
+-- خانة إدخال الكود
+local KeyBox = Instance.new("TextBox")
+KeyBox.Size = UDim2.new(0, 380, 0, 45)
+KeyBox.Position = UDim2.new(0.5, -190, 0, 85)
+KeyBox.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+KeyBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+KeyBox.PlaceholderText = "أدخل مفتاح التفعيل الخاص بك هنا..."
+KeyBox.TextSize = 14
+KeyBox.Font = Enum.Font.Gotham
+KeyBox.ClearTextOnFocus = false
+KeyBox.Parent = MainFrame
+
+local BoxCorner = Instance.new("UICorner")
+BoxCorner.CornerRadius = UDim.new(0, 8)
+BoxCorner.Parent = KeyBox
+
+-- زر التحقق الفوري
+local VerifyBtn = Instance.new("TextButton")
+VerifyBtn.Size = UDim2.new(0, 380, 0, 45)
+VerifyBtn.Position = UDim2.new(0.5, -190, 0, 150)
+VerifyBtn.BackgroundColor3 = Color3.fromRGB(0, 160, 255)
+VerifyBtn.Text = "تحقق وتفعيل السكريبت (Verify)"
+VerifyBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
+VerifyBtn.TextSize = 15
+VerifyBtn.Font = Enum.Font.GothamBold
+VerifyBtn.Parent = MainFrame
+
+local BtnCorner = Instance.new("UICorner")
+BtnCorner.CornerRadius = UDim.new(0, 8)
+BtnCorner.Parent = VerifyBtn
+
+-- معلومات الحصول على المفتاح في أسفل البانل
+local InfoLabel = Instance.new("TextLabel")
+InfoLabel.Size = UDim2.new(1, 0, 0, 30)
+InfoLabel.Position = UDim2.new(0, 0, 1, -40)
+InfoLabel.BackgroundTransparency = 1
+InfoLabel.Text = "احصل على مفتاحك من بوت ديسكورد الرسمي: SATAYA_ZLO"
+InfoLabel.TextColor3 = Color3.fromRGB(150, 150, 150)
+InfoLabel.TextSize = 12
+InfoLabel.Font = Enum.Font.GothamItalic
+InfoLabel.Parent = MainFrame
+
+-- دالة التحقق
+local function isKeyValid(inputKey)
+    for _, k in ipairs(VALID_KEYS) do
+        if k == inputKey then
+            return true
+        end
+    end
+    return false
+end
+
+VerifyBtn.MouseButton1Click:Connect(function()
+    local enteredKey = KeyBox.Text
+    
+    if isKeyValid(enteredKey) then
+        VerifyBtn.Text = "✅ تم التحقق بنجاح! جاري التشغيل..."
+        VerifyBtn.BackgroundColor3 = Color3.fromRGB(40, 200, 40)
+        
+        task.wait(1)
+        ScreenGui:Destroy()
+        
+        -- تشغيل السكريبت الأساسي Quantum Onyx بعد نجاح التحقق
+        local success, err = pcall(function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/flazhy/QuantumOnyx/refs/heads/main/QuantumOnyx.lua"))()
+        end)
+        
+        if not success then
+            warn("⚠️ خطأ في تشغيل السكريبت الأساسي: " + tostring(err))
+        end
+    else
+        -- طرد اللاعب فوراً إذا كان الكود خطأ
+        VerifyBtn.Text = "❌ مفتاح خاطئ! جاري الطرد..."
+        VerifyBtn.BackgroundColor3 = Color3.fromRGB(220, 40, 40)
+        task.wait(1)
+        player:Kick("⚡ [SATAYA_ZLO Security]: تم اكتشاف محاولة إدخال مفتاح غير صالح! تم طردك من اللعبة.")
+    end
+end)
