@@ -1,0 +1,229 @@
+local function showWhiteScreen()
+    local whiteScreen = Instance.new("ScreenGui")
+    local textLabel = Instance.new("TextLabel")
+
+    whiteScreen.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+    whiteScreen.Name = "WhiteScreen"
+    whiteScreen.ResetOnSpawn = false
+
+    textLabel.Parent = whiteScreen
+    textLabel.Name = "TextLabel"
+    textLabel.Size = UDim2.new(1, 0, 1, 0)
+    textLabel.Position = UDim2.new(0, 0, 0, 0)
+    textLabel.BackgroundColor3 = Color3.new(1, 1, 1)
+    textLabel.Text = "YouTube: HTM_KD"
+    textLabel.TextColor3 = Color3.new(0, 0, 0)
+    textLabel.TextScaled = true
+    textLabel.Font = Enum.Font.SourceSansBold
+    textLabel.TextSize = 50
+
+    wait(10)
+
+    whiteScreen:Destroy()
+end
+
+showWhiteScreen()
+
+
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+
+
+for _, part in pairs(character:GetDescendants()) do
+    if part:IsA("BasePart") then
+        part.CanCollide = false
+        part.CanTouch = false
+        part.CanQuery = false
+    end
+end
+
+
+character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Dead, false)
+character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Ragdoll, false)
+
+-- تعطيل التفاعل مع الأدوات والأسلحة
+character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.GettingUp, false)
+character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.FallingDown, false)
+
+-- تعطيل التفاعل مع الأدوات والأسلحة
+character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Physics, false)
+
+-- تعطيل التفاعل مع الأدوات والأسلحة
+character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.PlatformStanding, false)
+
+-- تعطيل التفاعل مع الأدوات والأسلحة
+character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Jumping, false)
+
+-- تعطيل التفاعل مع الأدوات والأسلحة
+character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Running, false)
+
+-- تعطيل التفاعل مع الأدوات والأسلحة
+character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Climbing, false)
+
+-- تعطيل التفاعل مع الأدوات والأسلحة
+character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Strafing, false)
+
+-- تعطيل التفاعل مع الأدوات والأسلحة
+character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Seated, false)
+
+-- تعطيل التفاعل مع الأدوات والأسلحة
+character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Physics, false)
+
+-- تعطيل التفاعل مع الأدوات والأسلحة
+character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.PlatformStanding, false)
+
+-- تعطيل التفاعل مع الأدوات والأسلحة
+character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Jumping, false)
+
+-- تعطيل التفاعل مع الأدوات والأسلحة
+character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Running, false)
+
+-- تعطيل التفاعل مع الأدوات والأسلحة
+character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Climbing, false)
+
+-- تعطيل التفاعل مع الأدوات والأسلحة
+character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Strafing, false)
+
+-- تعطيل التفاعل مع الأدوات والأسلحة
+character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Seated, false)
+
+-- تعطيل التفاعل مع الأدوات والأسلحة
+character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Physics, false)
+
+-- تعطيل التفاعل مع الأدوات والأسلحة
+character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.PlatformStanding, false)
+
+-- تعطيل التفاعل مع الأدوات والأسلحة
+character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Jumping, false)
+
+-- تعطيل التفاعل مع الأدوات والأسلحة
+character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Running, false)
+
+-- تعطيل التفاعل مع الأدوات والأسلحة
+character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Climbing, false)
+
+-- تعطيل التفاعل مع الأدوات والأسلحة
+character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Strafing, false)
+
+-- تعطيل التفاعل مع الأدوات والأسلحة
+character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Seated, false)
+
+-- تعطيل التفاعل مع الأدوات والأسلحة
+character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Physics, false)
+
+-- تعطيل التفاعل مع الأدوات والأسلحة
+character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.PlatformStanding, false)
+
+-- تعطيل التفاعل مع الأدوات والأسلحة
+character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Jumping, false)
+
+-- تعطيل التفاعل مع الأدوات والأسلحة
+character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Running, false)
+
+-- تعطيل التفاعل مع الأدوات والأسلحة
+character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Climbing, false)
+
+-- تعطيل التفاعل مع الأدوات والأسلحة
+character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Strafing, false)
+
+-- تعطيل التفاعل مع الأدوات والأسلحة
+character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Seated, false)
+
+-- تعطيل التفاعل مع الأدوات والأسلحة
+character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Physics, false)
+
+-- تعطيل التفاعل مع الأدوات والأسلحة
+character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.PlatformStanding, false)
+
+-- تعطيل التفاعل مع الأدوات والأسلحة
+character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Jumping, false)
+
+-- تعطيل التفاعل مع الأدوات والأسلحة
+character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Running, false)
+
+-- تعطيل التفاعل مع الأدوات والأسلحة
+character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Climbing, false)
+
+-- تعطيل التفاعل مع الأدوات والأسلحة
+character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Strafing, false)
+
+-- تعطيل التفاعل مع الأدوات والأسلحة
+character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Seated, false)
+
+-- تعطيل التفاعل مع الأدوات والأسلحة
+character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Physics, false)
+
+-- تعطيل التفاعل مع الأدوات والأسلحة
+character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.PlatformStanding, false)
+
+-- تعطيل التفاعل مع الأدوات والأسلحة
+character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Jumping, false)
+
+-- تعطيل التفاعل مع الأدوات والأسلحة
+character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Running, false)
+
+-- تعطيل التفاعل مع الأدوات والأسلحة
+character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Climbing, false)
+
+-- تعطيل التفاعل مع الأدوات والأسلحة
+character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Strafing, false)
+
+-- تعطيل التفاعل مع الأدوات والأسلحة
+character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Seated, false)
+
+-- تعطيل التفاعل مع الأدوات والأسلحة
+character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Physics, false)
+
+-- تعطيل التفاعل مع الأدوات والأسلحة
+character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.PlatformStanding, false)
+
+-- تعطيل التفاعل مع الأدوات والأسلحة
+character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Jumping, false)
+
+-- تعطيل التفاعل مع الأدوات والأسلحة
+character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Running, false)
+
+-- تعطيل التفاعل مع الأدوات والأسلحة
+character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Climbing, false)
+
+-- تعطيل التفاعل مع الأدوات والأسلحة
+character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Strafing, false)
+
+-- تعطيل التفاعل مع الأدوات والأسلحة
+character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Seated, false)
+
+-- تعطيل التفاعل مع الأدوات والأسلحة
+character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Physics, false)
+
+-- تعطيل التفاعل مع الأدوات والأسلحة
+character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.PlatformStanding, false)
+
+-- تعطيل التفاعل مع الأدوات والأسلحة
+character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Jumping, false)
+
+-- تعطيل التفاعل مع الأدوات والأسلحة
+character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Running, false)
+
+
+character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Climbing, false)
+
+
+character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Strafing, false)
+
+
+character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Seated, false)
+
+
+character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Physics, false)
+
+
+character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.PlatformStanding, false)
+
+character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Jumping, false)
+
+
+character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Running, false)
+
+character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Climbing, false)
+
+character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Strafing, false)
